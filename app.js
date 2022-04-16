@@ -9,7 +9,7 @@ const initDataBase = require("./startUp/initDataBase")
 
 const app = express()
 // const PORT = config.get("port") ?? 8080
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT ?? 8080
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
@@ -26,7 +26,6 @@ async function start() {
         app.listen(PORT, () => {
             console.log(chalk.green(`Server has been started on port ${PORT}...`))
         })
-        console.log(process.env.NODE_ENV)
     } catch (e) {
         console.log(chalk.red(e.message))
         process.exit(1)
