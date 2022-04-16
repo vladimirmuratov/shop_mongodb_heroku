@@ -1,0 +1,53 @@
+.wrapper {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product_name {
+    color: aliceblue;
+    font-size: 22px;
+}
+
+.product_id {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: aliceblue;
+}
+
+.product_count {
+    color: aliceblue;
+    font-size: 16px;
+}
+
+.product_count i {
+    cursor: pointer;
+}
+
+.product_price {
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.btn_position {
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+
+@media (max-width: 1025px) {
+    .btn_position {
+        right: 30%;
+    }
+}
+
+@media (max-width: 769px) {
+    .btn_position {
+        position: unset;
+    }
+}
+
+
+

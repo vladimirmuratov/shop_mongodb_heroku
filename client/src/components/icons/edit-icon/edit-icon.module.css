@@ -1,0 +1,8 @@
+.editIcon_wrapper {
+    cursor: pointer;
+}
+
+.editIcon_wrapper:hover svg{
+    transition: all 0.3s linear;
+    fill: red;
+}

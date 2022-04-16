@@ -1,0 +1,44 @@
+
+.card_name {
+    color: lightgray;
+    font-size: 20px;
+}
+
+.card_id {
+    color: lightgray;
+    font-size: 14px;
+}
+
+.card_manufacturer {
+    color: lightgray;
+    font-size: 16px;
+}
+
+.card_price {
+    color: lightgray;
+    font-size: 24px;
+}
+
+.btn_position{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+}
+
+@media (max-width: 1025px) {
+    .btn_position{
+        right: 5%;
+    }
+}
+
+@media (max-width: 769px) {
+    .btn_position{
+        right: 10%;
+    }
+}
+
+@media(max-width: 426px){
+    .btn_position{
+        position: unset;
+    }
+}

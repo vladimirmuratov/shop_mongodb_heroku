@@ -1,0 +1,16 @@
+
+.close_icon {
+    color: aliceblue;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.close_icon:hover{
+    background: aliceblue;
+}
+
+.close_icon:hover svg {
+    fill: red;
+}

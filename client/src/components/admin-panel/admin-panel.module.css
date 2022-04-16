@@ -1,0 +1,19 @@
+.adminPanel_wrapper{
+    border: 1px solid white;
+    display: flex;
+    position: relative;
+    min-height: 85vh;
+}
+
+.adminPanel_sidebar__position{
+    position: absolute;
+    left: 10px;
+    top: 10%;
+}
+
+.initial_position{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "mongoUri": "mongodb://u9j1gzeonufzc7kkf6c4:CkAEWAgVbTcqWoSj0Ytf@brlj3tpnrvyoshq-mongodb.services.clever-cloud.com:27017/brlj3tpnrvyoshq",
+  "accessSecret": "hello Vladilen",
+  "refreshSecret": "hello Result school"
+}

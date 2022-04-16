@@ -1,0 +1,28 @@
+.error_page_container {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_page_container h1 {
+    font-size: 36px;
+    color: aliceblue;
+}
+
+.error_page_container p {
+    font-size: 28px;
+    color: aliceblue;
+}
+
+.error_page_container a{
+    font-size: 18px;
+    color: aliceblue;
+    transition: all 0.3s linear;
+}
+
+.error_page_container a:hover{
+    color: #7a7676;
+}

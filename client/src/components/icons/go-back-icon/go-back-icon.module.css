@@ -1,0 +1,17 @@
+.goBack {
+    cursor: pointer;
+    position: fixed;
+    left: 10%;
+}
+
+@media(max-width: 426px){
+    .goBack{
+        left: 5%;
+    }
+}
+
+@media(max-width: 321px){
+    .goBack{
+        left: 2.5%;
+    }
+}

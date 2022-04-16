@@ -1,0 +1,62 @@
+.mainPage_container {
+    margin: 0 auto;
+    max-width: 1280px;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+.mainPage_content {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 97%;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    position: absolute;
+    right: 0;
+}
+
+.mainPage_content::-webkit-scrollbar {
+    width: 12px; /* ширина scrollbar */
+}
+
+.mainPage_content::-webkit-scrollbar-track {
+    background: #99738e; /* цвет дорожки */
+    border-radius: 5px;
+}
+
+.mainPage_content::-webkit-scrollbar-thumb {
+    background-color: blue; /* цвет плашки */
+    border-radius: 20px; /* закругления плашки */
+    border: 3px solid #99738e; /* padding вокруг плашки */
+}
+
+.error {
+    font-size: 18px;
+    color: #ced3db;
+}
+
+.mainPage_pagination {
+    margin: 1rem auto;
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+}
+
+@media(max-width: 769px){
+    .mainPage_pagination{
+        width: 90%;
+    }
+}
+
+@media(max-width: 426px){
+    .mainPage_pagination{
+        display: none;
+    }
+}

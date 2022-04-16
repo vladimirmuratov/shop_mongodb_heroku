@@ -1,0 +1,14 @@
+.search_container{
+    padding: 10px;
+}
+
+.search_container input{
+    width: 200px;
+    padding: 5px;
+    background: #2f2fa2;
+    border-bottom: 1px solid #76787c;
+    border-radius: 0;
+    color: #abb4ba;
+    font-family: inherit;
+    font-size: 18px;
+}

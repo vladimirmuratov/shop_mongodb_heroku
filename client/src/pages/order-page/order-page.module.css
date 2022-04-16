@@ -1,0 +1,30 @@
+.orderPage_wrapper{
+    margin: 10px auto;
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+h1{
+    margin: auto;
+    color: aliceblue;
+    letter-spacing: 2px;
+}
+
+.orderPage_wrapper::-webkit-scrollbar {
+    width: 12px; /* ширина scrollbar */
+}
+
+.orderPage_wrapper::-webkit-scrollbar-track {
+    background: #99738e; /* цвет дорожки */
+    border-radius: 5px;
+}
+
+.orderPage_wrapper::-webkit-scrollbar-thumb {
+    background-color: blue; /* цвет плашки */
+    border-radius: 20px; /* закругления плашки */
+    border: 3px solid #99738e; /* padding вокруг плашки */
+}
