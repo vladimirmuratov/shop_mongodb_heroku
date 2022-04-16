@@ -13,7 +13,7 @@
     "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
     "start": "node app.js",
     "install-client": "cd client && npm install",
-    "build": "cross-env NODE_ENV=production cd client && npm run build",
+    "build": "NODE_ENV=production && cd client && npm run build",
     "heroku-postbuild": "npm install && npm run install-client && npm run build"
   },
   "keywords": [],
