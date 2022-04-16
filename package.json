@@ -8,12 +8,12 @@
     "npm": "8.6.0"
   },
   "scripts": {
-    "server": "cross-env NODE_ENV=development nodemon app.js",
+    "server": "cross-env NODE_ENV=development PORT=8080 nodemon app.js",
     "client": "cd client && npm start",
-    "dev": "cross-env NODE_ENV=development concurrently \"npm run server\" \"npm run client\"",
+    "dev": "cross-env NODE_ENV=development PORT=8080 concurrently \"npm run server\" \"npm run client\"",
     "start": "node app.js",
     "install-client": "cd client && npm install",
-    "build": "NODE_ENV=production && cd client && npm run build",
+    "build": "NODE_ENV=production PORT=8080 && cd client && npm run build",
     "heroku-postbuild": "npm install && npm run install-client && npm run build"
   },
   "keywords": [],
