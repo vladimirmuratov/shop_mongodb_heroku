@@ -30,7 +30,7 @@ export const Header = () => {
                     {isAuth
                         ? (<>
                             <Link to="/cart" className={styles.cart_container}>
-                                Карзина
+                                Корзина
                                 {cart.length !== 0 && <span className={styles.cart_counter}>{cart.length}</span>}
                             </Link>
                             <div className={styles.block_name}>
@@ -58,7 +58,7 @@ export const Header = () => {
                         ? (<>
                             <li>
                                 <Link to="/cart" className={styles.cart_container}>
-                                    Карзина
+                                    Корзина
                                     {cart.length !== 0 && <span className={styles.cart_counter}>{cart.length}</span>}
                                 </Link>
                             </li>

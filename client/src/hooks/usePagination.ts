@@ -1,6 +1,6 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
-export const usePagination: ({contentPerPage, count}: { contentPerPage: any; count: any }) => { nextPage: () => void; firstContentIndex: number; totalPages: 0 | undefined | number; prevPage: () => void; lastContentIndex: number; page: number; setPage: (num: number) => void } = ({contentPerPage, count}) => {
+export const usePagination: (contentPerPage) => { nextPage: () => void; firstContentIndex: number; totalPages: any; prevPage: () => void; lastContentIndex: number; page: number; setPage: (num: number) => void } = ({contentPerPage, count}) => {
     const [page, setPage] = useState(1);
     // number of pages in total (total items / content on each page)
     const pageCount = count && Math.ceil(count / contentPerPage);

@@ -1,9 +1,10 @@
 import React, {FC, useCallback, useEffect, useState} from "react";
-import {useHistory} from "react-router-dom";
+import {useHistory, useLocation, useParams} from "react-router-dom";
 import styles from "./search.module.css";
 
 export const Search: FC = (): JSX.Element => {
     const history = useHistory()
+    const {pathname} = useLocation<any>()
     const [inputVal, setInputVal] = useState<string>('')
 
     const handleChange = useCallback((e) => {
@@ -11,8 +12,14 @@ export const Search: FC = (): JSX.Element => {
     }, [])
 
     useEffect(() => {
+        if(pathname !== '/'){
+            setInputVal('')
+        }
+    }, [pathname])
+
+    useEffect(() => {
         if (inputVal.length) {
-            history.push({search: `?name=${inputVal}`})
+            history.push({pathname: '/', search: `?name=${inputVal}`})
         } else {
             history.push("/")
         }

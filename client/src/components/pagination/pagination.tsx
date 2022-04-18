@@ -1,4 +1,4 @@
-import React, {FC} from "react";
+import React, {FC, useEffect} from "react";
 import styles from "./pagination.module.css";
 
 type TProps = {
@@ -9,9 +9,15 @@ type TProps = {
     nextPage: () => void;
     prevPage: () => void;
     setPage: (page: number) => void;
+    isResetPage: boolean;
 }
 
-export const Pagination: FC<TProps> = ({page, totalPages, prevPage, setPage, nextPage}): JSX.Element => {
+export const Pagination: FC<TProps> = ({page, totalPages, prevPage, setPage, nextPage, isResetPage}): JSX.Element => {
+
+    useEffect(() => {
+        setPage(1)
+    }, [isResetPage])
+
     return (
         <div className={styles.pagination}>
             <p className={styles.text}>

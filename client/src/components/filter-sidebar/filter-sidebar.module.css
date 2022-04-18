@@ -1,4 +1,4 @@
-.sidebar_container__position{
+.filter_sidebar_container__position{
     position: absolute;
     left: 10px;
 }
@@ -13,7 +13,7 @@
     .sidebar_container{
         display: none;
     }
-    .sidebar_container__position{
+    .filter_sidebar_container__position{
         display: none;
     }
 }
@@ -22,7 +22,7 @@
     .sidebar_container{
         display: none;
     }
-    .sidebar_container__position{
+    .filter_sidebar_container__position{
         display: none;
     }
 }
@@ -31,7 +31,7 @@
     .sidebar_container{
         display: none;
     }
-    .sidebar_container__position{
+    .filter_sidebar_container__position{
         display: none;
     }
 }

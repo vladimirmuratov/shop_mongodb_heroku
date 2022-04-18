@@ -1,0 +1,30 @@
+.sort_sidebar_container li:first-child {
+    text-decoration: underline;
+}
+
+.sort_sidebar_container li:not(first-child) {
+    cursor: pointer;
+}
+
+.sort_sidebar_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort_sidebar_subtitle {
+    font-size: 14px;
+}
+
+.sort_sidebar_container__position {
+    position: absolute;
+    right: 10px;
+}
+
+.sort_sidebar_title__clear {
+    color: #f64c72 !important;
+    background-color: aliceblue;
+    padding: 5px !important;
+    border-radius: 5px;
+    font-size: 14px!important;
+}

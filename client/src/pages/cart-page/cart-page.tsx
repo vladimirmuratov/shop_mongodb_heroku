@@ -98,7 +98,7 @@ export const CartPage: FC = (): JSX.Element => {
                         <Pagination page={page} totalPages={totalPages ? totalPages : 0}
                                     firstContentIndex={firstContentIndex}
                                     lastContentIndex={lastContentIndex} nextPage={nextPage} prevPage={prevPage}
-                                    setPage={setPage}/>
+                                    setPage={setPage} isResetPage={false}/>
                     </div>
                     <div className={`sidebar_container ${styles.sidebar_position} ${styles.sidebar_wrapper}`}>
                         <div>Итого: {productsInCart.length} товара(ов)</div>
@@ -111,7 +111,7 @@ export const CartPage: FC = (): JSX.Element => {
                         </button>
                     </div>
                 </div>)
-                : <h2 className={styles.cartPage_cartEmpty}>Карзина пуста <i className="bi bi-emoji-smile"/></h2>
+                : <h2 className={styles.cartPage_cartEmpty}>Корзина пуста <i className="bi bi-emoji-smile"/></h2>
             }
         </>
     )
