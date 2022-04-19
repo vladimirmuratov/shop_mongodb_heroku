@@ -12,6 +12,7 @@ import {clearCart, updateInStock} from "../../store/goods";
 import {useHistory} from "react-router-dom";
 import {TCart, TOrder} from "../../store/types/order";
 import {toast} from "react-toastify";
+import {localStorageService} from "../../services/localStorage.service";
 
 export const CartPage: FC = (): JSX.Element => {
     const history = useHistory()
@@ -65,6 +66,7 @@ export const CartPage: FC = (): JSX.Element => {
         if (!hasError) {
             await dispatch(clearCart())
             history.push("/")
+            localStorageService.removeCart()
         }
     }
 
@@ -91,8 +93,9 @@ export const CartPage: FC = (): JSX.Element => {
                 ? (<div className={styles.cartPage_wrapper}>
                     <span className={styles.cartPage__goBack_icon}><GoBackIcon/></span>
                     <ul className={styles.cartPage_container}>
-                        {productsInCart.slice(firstContentIndex, lastContentIndex).map((item, index) => <CartItem
-                            key={index} {...item}/>)}
+                        {productsInCart.slice(firstContentIndex, lastContentIndex).map((item, index) => (
+                            <CartItem key={index} {...item}/>))
+                        }
                     </ul>
                     <div className={styles.cartPage_pagination}>
                         <Pagination page={page} totalPages={totalPages ? totalPages : 0}

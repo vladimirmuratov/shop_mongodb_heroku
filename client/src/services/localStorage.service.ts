@@ -2,6 +2,7 @@ const TOKEN_KEY = "jwt-access-token"
 const REFRESH_KEY = "jwt-refresh-token"
 const EXPIRES_KEY = "jwt-expires"
 const USERID_KEY = "userId"
+const CART = "cart"
 
 export function setTokens({accessToken, refreshToken, userId, expiresIn = 3600}: { accessToken: string; refreshToken: string; userId: string; expiresIn: number }) {
     const expiresDate = new Date().getTime() + expiresIn * 1000
@@ -34,11 +35,26 @@ export function removeToken() {
     localStorage.removeItem(USERID_KEY)
 }
 
+export function setCart(cart)  {
+    localStorage.setItem(CART, cart)
+}
+
+export function getCart()  {
+    return localStorage.getItem(CART)
+}
+
+export function removeCart(){
+    localStorage.removeItem(CART)
+}
+
 export const localStorageService = {
     setTokens,
     getAccessToken,
     getRefreshToken,
     getTokenExpiresDate,
     getUserId,
-    removeToken
+    removeToken,
+    setCart,
+    getCart,
+    removeCart
 }

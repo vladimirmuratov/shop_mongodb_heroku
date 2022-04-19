@@ -1,6 +1,6 @@
 {
   "port": 8080,
-  "mongoUri": "mongodb://u9j1gzeonufzc7kkf6c4:CkAEWAgVbTcqWoSj0Ytf@brlj3tpnrvyoshq-mongodb.services.clever-cloud.com:27017/brlj3tpnrvyoshq",
+  "mongoUri": "mongodb+srv://vladimir:4015216Aa@cluster0.rjm8i.mongodb.net/i-shop?retryWrites=true&w=majority",
   "accessSecret": "hello Vladilen",
   "refreshSecret": "hello Result school"
 }

@@ -2,6 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 import {goodsService} from "../services/goods.service";
 import {TDataState} from "./types/goods";
 import {TProduct} from "../types";
+import {localStorageService} from "../services/localStorage.service";
 
 const initialState: TDataState = {
     data: [],
@@ -15,14 +16,17 @@ const goodsSlice = createSlice({
     name: "goods",
     initialState,
     reducers: {
+        requested(state) {
+            state.isLoading = true
+        },
         received(state, action) {
             state.data = action.payload
             state.isLoading = false
             state.hasError = false
             state.message = ""
         },
-        requested(state) {
-            state.isLoading = true
+        fetchCartFromLocStorage(state, action) {
+            state.cart = action.payload
         },
         failed(state, action) {
             state.isLoading = false
@@ -54,14 +58,28 @@ const goodsSlice = createSlice({
 })
 
 const {actions, reducer: goodsReducer} = goodsSlice
-const {received, requested, failed, addedToCart, removedFromCart, removedFromTable, clearedCart, updatedInStock} = actions
+const {
+    received,
+    requested,
+    fetchCartFromLocStorage,
+    failed,
+    addedToCart,
+    removedFromCart,
+    removedFromTable,
+    clearedCart,
+    updatedInStock
+} = actions
 
-export const loadGoods = () => async (dispatch: any) => {
+export const loadGoods = () => async (dispatch) => {
     dispatch(requested())
     try {
         const {data} = await goodsService.fetch()
         // const sortedContent = _.sortBy(content, ["type"], ["asc"])
         dispatch(received(data.content))
+        const cart = localStorageService.getCart()
+        if (cart?.length) {
+            dispatch(fetchCartFromLocStorage(JSON.parse(cart)))
+        }
 
     } catch (error) {
         dispatch(failed(error))
